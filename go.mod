@@ -1,3 +1,3 @@
-module github.com/chen3feng/stl4go
+module github.com/MustangYan/stl4go
 
 go 1.18
