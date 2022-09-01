@@ -30,4 +30,5 @@ type Set[K any] interface {
 	RemoveN(...K)           // Remove multiple elements with specific keys.
 	ForEach(func(K))        // Iterate the container.
 	ForEachIf(func(K) bool) // Iterate the container, stops when the callback returns false.
+	ToSlice() []K           // 增加一个ToSlice的接口 无法保证顺序
 }

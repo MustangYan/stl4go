@@ -31,6 +31,15 @@ func (s *BuiltinSet[K]) Clear() {
 	}
 }
 
+// 增加一个ToSlice的接口 无法保证顺序
+func (s *BuiltinSet[K]) ToSlice() []K {
+	array := make([]K, 0)
+	for k := range *s {
+		array = append(array, k)
+	}
+	return array
+}
+
 // Has implements the Set interface.
 func (s BuiltinSet[K]) Has(k K) bool {
 	_, ok := s[k]
